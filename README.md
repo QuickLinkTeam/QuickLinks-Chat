@@ -48,15 +48,14 @@
 
 ```mermaid
 graph TD;
-    User -->|웹 링크 요청 및 질문| Client[Frontend (React/React_Native)];
-    Client -->|링크 등록 및 질문| Server[Backend (Node.js)];
-    Server -->|데이터 저장 및 API 호출| Database[MongoDB_or_Firebase];
+    User -->|웹 링크 요청 및 질문| Client[Frontend React ReactNative];
+    Client -->|링크 등록 및 질문| Server[Backend Nodejs];
+    Server -->|데이터 저장 및 API 호출| Database[MongoDB or Firebase];
     Server -->|API 요청 중개| ChatGPT_API[ChatGPT API];
     Database -->|링크 및 사용자 데이터 관리| Server;
     ChatGPT_API -->|답변 반환| Server;
     Server -->|응답| Client;
 
----
 
 ## 🌟 기대 효과
 - **저장 공간 절약**: 앱 설치 부담을 줄이고 브라우저 기반으로 웹사이트 접근.
