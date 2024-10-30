@@ -48,15 +48,13 @@
 
 ```mermaid
 graph TD;
-    사용자 -->|웹 링크 요청 및 질문| 클라이언트[프론트엔드 (React/React Native)];
-    클라이언트 -->|링크 등록 및 질문| 서버[백엔드 (Node.js)];
-    서버 -->|데이터 저장 및 API 호출| 데이터베이스[MongoDB 또는 Firebase];
-    서버 -->|API 요청 중개| ChatGPT[ChatGPT API];
-    데이터베이스 -->|링크 및 사용자 데이터 관리| 서버;
-    ChatGPT -->|답변 반환| 서버;
-    서버 -->|응답| 클라이언트;
-
-```
+    User -->|웹 링크 요청 및 질문| Client[Frontend (React/React_Native)];
+    Client -->|링크 등록 및 질문| Server[Backend (Node.js)];
+    Server -->|데이터 저장 및 API 호출| Database[MongoDB_or_Firebase];
+    Server -->|API 요청 중개| ChatGPT_API[ChatGPT API];
+    Database -->|링크 및 사용자 데이터 관리| Server;
+    ChatGPT_API -->|답변 반환| Server;
+    Server -->|응답| Client;
 
 ---
 
