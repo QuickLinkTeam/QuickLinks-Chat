@@ -20,16 +20,19 @@
 앱의 주요 화면 디자인을 통해 UI/UX의 흐름을 확인할 수 있습니다.
 
 ### 링크 등록 화면
-![Link Registration](./images/link_registration.png)
+![image](https://github.com/user-attachments/assets/205530dd-9840-4efc-afab-fe01349ef2d1)
+
 
 ### ChatGPT 대화 화면
-![ChatGPT Interface](./images/chat_interface.png)
+![image](https://github.com/user-attachments/assets/993aa589-e778-4c4f-850f-20fe0efbd0d3)
+
 
 ### 새 게시물 알림 화면
-![New Post Notification](./images/new_post_notification.png)
+![image](https://github.com/user-attachments/assets/e2c2d86b-5612-4212-be27-f386f3d48473)
+
 
 ### 로그인 및 회원가입 화면
-![Login and Signup](./images/login_signup.png)
+![image](https://github.com/user-attachments/assets/5f784a11-74b2-4056-a5ef-36c5383e4e89)
 
 ---
 
