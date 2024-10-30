@@ -55,6 +55,7 @@ graph TD;
     Database -->|링크 및 사용자 데이터 관리| Server;
     ChatGPT_API -->|답변 반환| Server;
     Server -->|응답| Client;
+```
 
 
 ## 🌟 기대 효과
