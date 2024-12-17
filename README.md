@@ -1,84 +1,140 @@
+# 링크 모음 어플 + ChatGPT API 통합 (QuickLinks-Chat)
 
-
-# 📌 링크 모음 어플 + ChatGPT API 통합
-
-
-**링크 모음 어플**은 자주 사용하는 앱을 설치하지 않고도 빠르게 접근 가능한 **웹 기반 링크 관리**를 제공합니다. 이를 통해 **스마트폰 저장 공간을 절약**하고 **성능 최적화**를 실현합니다. 더불어 **ChatGPT API**와 통합하여 사용자 질문에 실시간으로 응답하는 기능을 지원, AI 서비스의 부담을 최소화합니다.
-
----
-
-## 🚀 프로젝트 목표
-
-### 🔹 프로젝트 특징
-1. **저장 공간 절약**: 웹 기반으로 접근하여 스마트폰의 저장 용량을 절감합니다.
-2. **성능 향상**: 앱 설치 부담 없이 필요한 기능만 제공합니다.
-3. **ChatGPT API 통합**: 간단한 질문과 응답을 경량화된 방식으로 처리합니다.
+## 1. 프로젝트 제목, 팀 번호, 팀 구성원 소개
+- **프로젝트 제목**: 링크 모음 어플 + ChatGPT API 통합 (QuickLinks-Chat)
+- **팀 번호**: 9
+- **팀 구성원**:
+  - **박시운** (Frontend Developer)
+  - **이종수** (Backend Developer)
+  - **이해원** (Frontend Developer)
 
 ---
 
-## 📱 프로젝트 디자인
+## 2. 기존 서비스 문제 제기
+### 🔹 문제점 분석
+1. **스마트폰 저장 공간 부족 및 성능 저하**  
+   많은 앱 설치로 인해 저장 용량이 부족해지는 문제가 발생합니다. 특히 콘텐츠 관리 및 정보 탐색을 위해 여러 앱을 설치하면 RAM, CPU 사용량이 과도하게 증가하고 스마트폰 성능이 저하됩니다.
 
-앱의 주요 화면 디자인을 통해 UI/UX의 흐름을 확인할 수 있습니다.
+2. **정보의 과잉과 비효율적인 관리**  
+   현대 사용자들은 뉴스, 블로그, 소셜 미디어, 개인 관심사 콘텐츠 등 다양한 정보 채널에 노출되어 있습니다. 이처럼 과잉된 정보 속에서 중요한 정보만 선별하고 관리하기 어려우며, 시간이 지나면 필요한 정보를 찾는 데 번거로움이 발생합니다.
 
-### 링크 등록 화면
-![image](https://github.com/user-attachments/assets/205530dd-9840-4efc-afab-fe01349ef2d1)
+3. **알림 및 피드 관리의 불편함**  
+   사용자들은 뉴스, 블로그, 소셜 플랫폼 등에서 실시간으로 새로운 소식이나 업데이트를 받고 싶어 합니다. 하지만 이를 위해 여러 앱을 설치하고 각각의 알림을 확인해야 하는 번거로움이 존재하며, 중요한 알림을 놓칠 가능성이 큽니다.
 
+4. **사용자 맞춤형 콘텐츠 추천의 부재**  
+   기존 링크 저장 서비스는 단순한 링크 수집과 정리에 그치며, 사용자의 관심사나 행동 패턴을 분석하고 추천하는 기능이 부족합니다. 따라서 저장된 콘텐츠를 다시 탐색하거나 활용하는 재발견의 기회가 제한됩니다.
 
-### ChatGPT 대화 화면
-![image](https://github.com/user-attachments/assets/993aa589-e778-4c4f-850f-20fe0efbd0d3)
+### 🔹 기존 서비스 ‘Pocket’ 분석
+- **단순한 링크 저장 기능**: 링크와 콘텐츠를 저장하고 분류하는 기능에 집중되어 있음.
+- **사용자 맞춤형 기능 부족**: 개인화된 콘텐츠 추천 기능이 없음.
+- **실시간 업데이트 및 알림 부재**: RSS 피드 기반 실시간 알림 기능이 제공되지 않음.
 
-
-### 새 게시물 알림 화면
-![image](https://github.com/user-attachments/assets/e2c2d86b-5612-4212-be27-f386f3d48473)
-
-
-### 로그인 및 회원가입 화면
-![image](https://github.com/user-attachments/assets/5f784a11-74b2-4056-a5ef-36c5383e4e89)
-
----
-
-## 🛠️ 기술 스택
-- **Frontend**: React, React Native
-- **Backend**: Node.js, Express
-- **Database**: MongoDB 또는 Firebase
-- **AI Integration**: ChatGPT API
-
-## 📊 시스템 아키텍처
-
-아래 아키텍처는 클라이언트-서버 구조로, 사용자 요청을 비동기로 처리하여 최적화된 성능을 제공합니다.
-
-```mermaid
-graph TD;
-    User -->|웹 링크 요청 및 질문| Client[Frontend React ReactNative];
-    Client -->|링크 등록 및 질문| Server[Backend Nodejs];
-    Server -->|데이터 저장 및 API 호출| Database[MongoDB or Firebase];
-    Server -->|API 요청 중개| ChatGPT_API[ChatGPT API];
-    Database -->|링크 및 사용자 데이터 관리| Server;
-    ChatGPT_API -->|답변 반환| Server;
-    Server -->|응답| Client;
-```
-
-
-## 🌟 기대 효과
-- **저장 공간 절약**: 앱 설치 부담을 줄이고 브라우저 기반으로 웹사이트 접근.
-- **성능 최적화**: 필요 최소한의 자원만 사용하여 성능 보장.
-- **사용자 경험 개선**: ChatGPT API의 경량화된 AI 서비스로 효율적인 사용자 경험 제공.
-
-## 📈 성능 지표 및 도구
-1. **메모리 사용량**: 앱 실행 시 메모리 사용 측정.
-2. **CPU 사용량**: AI 호출 시 자원 소비량 확인.
-3. **응답 시간**: 사용자 입력에 대한 응답 속도.
-4. **배터리 소모량**: 앱 실행 시 배터리 사용량.
-
-### 성능 측정 도구
-- **Android Profiler (Android Studio)**
-- **Instruments (Xcode)**
-- **Firebase Performance Monitoring**
+### 🔹 개선 방향
+1. **통합된 정보 관리 플랫폼**: 다양한 웹 서비스(뉴스, 블로그, 소셜 미디어, RSS 등)를 하나의 플랫폼에서 통합 관리합니다.
+2. **실시간 업데이트 및 알림 시스템**: RSS 피드와 알림 시스템을 통해 실시간 변동 사항을 알림으로 제공합니다.
+3. **스마트한 콘텐츠 추천**: 사용자의 관심사와 패턴을 분석하여 맞춤형 콘텐츠를 추천합니다.
+4. **웹 기반 경량화 서비스**: 불필요한 앱 설치를 줄이고 CPU와 RAM 사용량을 절감합니다.
+5. **단순하고 직관적인 사용자 경험(UX)**: React와 React Native를 활용하여 직관적이고 빠른 사용자 경험을 제공합니다.
 
 ---
 
-## 💡 추가 참고 자료
-- [OpenAI Dedicated Instance](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)
-- [BrowserStack Memory Usage Guide](https://www.browserstack.com/docs/app-performance/app-performance-guides/android/memory-usage)
+## 3. 구현된 프로젝트의 풀버전 GUI와 상세 매뉴얼
+### 🔹 프로젝트 개요
+웹 기반 링크 관리와 ChatGPT API 통합을 통해 스마트폰 저장 공간을 절약하고 성능 최적화를 실현합니다.
+
+### 🔹 주요 화면과 기능
+## 3-1. 프론트엔드 GUI
+1. **링크 등록 화면**  
+   - **기능**: 사용자가 자주 사용하는 링크를 등록하고 관리할 수 있습니다.  
+   - **화면 예시**: ![image](https://github.com/user-attachments/assets/924cbf9a-8f51-4ac3-9630-344769c7ed2b)
+
+
+2. **ChatGPT 대화 화면**  
+   - **기능**: ChatGPT API와 통합하여 실시간으로 질문에 대한 답변을 받을 수 있습니다.  
+   - **화면 예시**:![image](https://github.com/user-attachments/assets/c2d0e5e5-72e5-47a5-b5d9-70fc5546463f)
+
+
+3. **새 게시물 알림 화면(RSS)**  
+   - **기능**: 새로운 링크나 게시물이 등록되면 알림을 받을 수 있습니다.  
+   - **화면 예시**:![image](https://github.com/user-attachments/assets/20b1c5ed-0656-4ee0-80a4-6dd4578932c0)
+
+
+4. **로그인 및 회원가입 화면**  
+   - **기능**: 사용자 계정 생성 및 로그인을 통해 맞춤형 서비스를 제공합니다.  
+   - **화면 예시**:![image](https://github.com/user-attachments/assets/4ba986cc-6e8f-413e-8a34-61eac15e5a7a)
+
+
+### 🔹 상세 매뉴얼
+1. **링크 등록**: ‘링크 추가’ 버튼 클릭 → URL 입력 → ‘저장’ 클릭.
+2. **ChatGPT 사용법**: Chat 화면에서 질문 입력 → ‘전송’ 클릭 → AI 답변 확인.
+3. **새 게시물 알림**: 알림 활성화 후 새로운 링크 등록 시 자동 알림.
+4. **로그인/회원가입**: 로그인 화면에서 이메일과 비밀번호 입력 → 로그인 버튼 클릭.
 
 ---
+
+## 3-2. 백엔드 시스템 아키텍처
+
+### 🔹 시스템 구성도
+![image](https://github.com/user-attachments/assets/9c3777db-421b-4072-8012-03fd81bf3b1c)
+
+1. **소스코드 관리 및 CI/CD 파이프라인**
+   - **GitHub Actions**: 코드 빌드 및 테스트 → Amazon S3 업로드.
+   - **AWS CodeDeploy**: S3에서 EC2에 배포.
+
+2. **백엔드 시스템**
+   - **Amazon EC2**: Spring Boot + Docker 컨테이너 배포.
+   - **Redis**: 임시 데이터 저장 및 성능 최적화.
+   - **Batch**: RSS 피드 변동 사항 확인 및 데이터 처리.
+   - **Open API 연동**: ChatGPT API 통합.
+
+3. **데이터베이스**
+   - **Amazon RDS (MySQL)**:
+     - 사용자 정보, 링크 데이터, RSS 피드, 알림 정보를 저장.
+
+4. **프론트엔드 시스템**
+   - **React**: UI 제공 및 NGINX로 백엔드와 통신.
+   - **React Native**: 모바일 앱 개발.
+
+### 🔹 ERD
+![image](https://github.com/user-attachments/assets/afb5c8ea-f602-41ca-9edb-a708b571df19)
+
+- **Member**: 사용자 정보 관리.
+- **Link**: 링크 데이터 관리.
+- **RSS Feed**: RSS 피드 구독 정보.
+- **RSS Item**: RSS 피드 항목 관리.
+- **Notification**: 알림 정보 관리.
+
+---
+
+## 3-3. 프로젝트 기능
+1. **소셜 로그인 및 자체 회원가입**
+   - **카카오 OAuth2**: 간편 로그인.
+   - **자체 로그인**: 이메일과 비밀번호를 이용해 로그인 (BCrypt 암호화).
+   - **JWT 인증 시스템**: AccessToken 및 RefreshToken 관리.
+
+2. **링크 관리 기능**
+   - 링크 저장/조회/수정/삭제 기능.
+   - ChatGPT API를 통한 링크 추천.
+
+3. **RSS 피드 관리 기능**
+   - RSS 피드 등록 및 자동 검사.
+   - 새로운 RSS 항목 추가 시 알림 생성.
+
+4. **알림 시스템**
+   - RSS 피드 기반 알림 제공.
+   - 알림 읽음 상태 관리.
+
+5. **배치 작업 및 스케줄링**
+   - **RSS 피드 검사**: 5분마다 실행.
+   - **알림 자동 생성**: 새로운 항목 확인 시 알림 생성.
+
+---
+
+## 4. 기대 효과
+### 🌟 프로젝트를 통해 기대되는 효과
+1. **정보 관리의 효율성 향상**: RSS 및 알림 기능으로 최신 정보를 실시간 제공.
+2. **개인화된 콘텐츠 경험 제공**: 맞춤형 추천 기능으로 콘텐츠 활용 극대화.
+3. **스마트폰 성능 최적화**: 웹 기반 접근으로 저장 공간 및 CPU 사용량 절감.
+4. **통합된 알림 시스템 제공**: 중요한 정보만 선별 제공.
+5. **사용자 편의성 개선**: 하나의 플랫폼에서 다양한 기능 제공.
+
